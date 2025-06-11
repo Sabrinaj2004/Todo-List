@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>To-Do List</title>
+  <link rel="stylesheet" href="style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <link href="https://fonts.googleapis.com/css2?family=Caveat&family=Shadows+Into+Light&display=swap" rel="stylesheet">
+</head>
+<body>
+    <audio id="beep" src="https://www.soundjay.com/buttons/sounds/button-16.mp3" preload="auto"></audio>
+    <div id="toast" class="toast">Task added</div>
+  <div class="container">
+    <div class="theme-toggle">
+        <label class="switch">
+          <input type="checkbox" id="theme-switch">
+          <span class="slider"></span>
+        </label>
+        <span id="theme-label">🌞 Light</span>
+      </div>      
+    <h1><i class="fas fa-list-check"></i> To-Do List</h1>
+    <!-- <div class="input-group">
+      <input type="text" id="task-input" placeholder="Add a new task..." />
+      <button id="add-btn"><i class="fas fa-plus"></i></button>
+    </div> -->
+    <div class="input-area">   
+        <input type="text" id="task-input" placeholder="Enter your task..." />
+        <button id="mic-btn" title="Speak your task">🎤</button>
+        <button id="add-btn"><i class="fas fa-plus"></i></button>
+    </div>
+    <div class="filters">
+        <button class="filter-btn active" data-filter="all">All</button>
+        <button class="filter-btn" data-filter="completed">Completed</button>
+        <button class="filter-btn" data-filter="pending">Pending</button>
+      </div>      
+    <ul id="task-list"></ul>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,332 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    font-family: 'Poppins', sans-serif;
+    background: linear-gradient(120deg, #a18cd1 0%, #fbc2eb 100%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    padding: 20px;
+    color: #333;
+  }
+  
+  .container {
+    background-color: #fff;
+    border-radius: 20px;
+    padding: 2rem;
+    width: 100%;
+    max-width: 450px;
+    box-shadow: 0 12px 25px rgba(0, 0, 0, 0.15);
+    transition: 0.3s ease;
+  }
+  
+  .container:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 16px 32px rgba(0, 0, 0, 0.2);
+  }
+  
+  h1 {
+    text-align: center;
+    margin-bottom: 1.5rem;
+    font-size: 2rem;
+    color: #6c3483;
+  }
+  
+  .input-group {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin-bottom: 1.5rem;
+    flex-wrap: wrap;
+  }
+  
+  #task-input {
+    flex: 1;
+    padding: 12px 16px;
+    border: 2px solid #dcdcdc;
+    border-radius: 12px;
+    outline: none;
+    font-size: 1rem;
+    transition: border-color 0.3s;
+  }
+  
+  #task-input:focus {
+    border-color: #a18cd1;
+  }
+  
+  #add-btn {
+    padding: 12px 18px;
+    border: none;
+    background-color: #a18cd1;
+    color: white;
+    border-radius: 12px;
+    cursor: pointer;
+    font-size: 1rem;
+    transition: background-color 0.3s;
+  }
+  
+  #add-btn:hover {
+    background-color: #8e44ad;
+  }
+  
+  #task-list {
+    list-style: none;
+    max-height: 350px;
+    overflow-y: auto;
+    padding-right: 4px;
+  }
+  
+  li {
+    background-color: #fdf1ff;
+    color: #333;
+    padding: 12px 16px;
+    border-radius: 12px;
+    margin-bottom: 12px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    transition: transform 0.2s ease;
+  }
+  
+  li:hover {
+    transform: scale(1.02);
+  }
+  
+  li.completed {
+    text-decoration: line-through;
+    color: #999;
+    background-color: #e8e8e8;
+  }
+  
+  .delete-btn {
+    background-color: transparent;
+    color: #ff5b5b;
+    border: none;
+    font-size: 1.1rem;
+    cursor: pointer;
+    transition: color 0.3s;
+  }
+  
+  .delete-btn:hover {
+    color: #c0392b;
+  }
+  
+  .task-color-1 {
+    background-color: #ffe0e9;
+  }
+  
+  .task-color-2 {
+    background-color: #e0f7fa;
+  }
+  
+  .task-color-3 {
+    background-color: #e6ee9c;
+  }
+  
+  .task-color-4 {
+    background-color: #f8bbd0;
+  }
+  
+  .task-color-5 {
+    background-color: #d1c4e9;
+  }
+  
+  .task-color-6 {
+    background-color: #fff3e0;
+  }
+  
+  /* 🌙 Theme Toggle Switch */
+  .theme-toggle {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    margin-bottom: 10px;
+  }
+  
+  .theme-toggle #theme-label {
+    margin-left: 10px;
+    font-weight: bold;
+    font-size: 0.9rem;
+  }
+  
+  /* Switch styling */
+  .switch {
+    position: relative;
+    display: inline-block;
+    width: 46px;
+    height: 24px;
+  }
+  
+  .switch input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+  }
+  
+  .slider {
+    position: absolute;
+    cursor: pointer;
+    background-color: #ccc;
+    border-radius: 34px;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    transition: 0.4s;
+  }
+  
+  .slider:before {
+    position: absolute;
+    content: "";
+    height: 18px;
+    width: 18px;
+    left: 4px;
+    bottom: 3px;
+    background-color: white;
+    border-radius: 50%;
+    transition: 0.4s;
+  }
+  
+  input:checked + .slider {
+    background-color: #4caf50;
+  }
+  
+  input:checked + .slider:before {
+    transform: translateX(22px);
+  }
+  
+  /* 🌑 DARK MODE */
+  body.dark-mode {
+    background: linear-gradient(135deg, #212121, #424242);
+    color: #f0f0f0;
+  }
+  
+  body.dark-mode .container {
+    background-color: #2c2c2c;
+    box-shadow: 0 6px 24px rgba(0, 0, 0, 0.3);
+  }
+  
+  body.dark-mode #task-input,
+  body.dark-mode .edit-input {
+    background-color: #424242;
+    color: #f0f0f0;
+    border: 1px solid #555;
+  }
+  
+  body.dark-mode #add-btn {
+    background-color: #388e3c;
+  }
+  
+  body.dark-mode #add-btn:hover {
+    background-color: #2e7d32;
+  }
+  
+  body.dark-mode .delete-btn {
+    color: #ff8a80;
+  }
+  
+  body.dark-mode .delete-btn:hover {
+    color: #ff5252;
+  }
+  
+  body.dark-mode li.completed {
+    color: #aaa !important;
+  }
+  
+  body.dark-mode .slider {
+    background-color: #888;
+  }
+  
+  /* Filters */
+  .filters {
+    display: flex;
+    justify-content: center;
+    margin-top: 10px; /* 🔼 Add some spacing above */
+    margin-bottom: 20px;
+    gap: 10px;
+  }
+  
+  
+  .filter-btn {
+    padding: 8px 14px;
+    border: none;
+    border-radius: 10px;
+    background-color: #eee;
+    cursor: pointer;
+    font-size: 0.95rem;
+    transition: 0.3s ease;
+    font-weight: 500;
+  }
+  
+  .filter-btn:hover {
+    background-color: #ddd;
+  }
+  
+  .filter-btn.active {
+    background-color: #4caf50;
+    color: #fff;
+  }
+  
+  body.dark-mode .filter-btn {
+    background-color: #444;
+    color: #eee;
+  }
+  
+  body.dark-mode .filter-btn.active {
+    background-color: #66bb6a;
+    color: #111;
+  }
+  
+  /* Drag and drop */
+  li.dragging {
+    opacity: 0.5;
+    transform: scale(0.98);
+  }
+  
+  li.drag-over {
+    border: 2px dashed #4caf50;
+    border-radius: 10px;
+  }
+  
+  /* Mic button */
+  #mic-btn {
+    background-color: #e0e0e0;
+    border: none;
+    padding: 10px;
+    border-radius: 50%;
+    cursor: pointer;
+    font-size: 18px;
+    transition: background 0.2s ease;
+  }
+  
+  #mic-btn:hover {
+    background-color: #c5f1ff;
+  }
+  
+  /* Toast */
+  .toast {
+    position: fixed;
+    bottom: 30px;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: #4caf50;
+    color: white;
+    padding: 12px 20px;
+    border-radius: 8px;
+    opacity: 0;
+    pointer-events: none;
+    font-weight: bold;
+    transition: opacity 0.5s ease, transform 0.3s ease;
+    z-index: 9999;
+  }
+  
+  .toast.show {
+    opacity: 1;
+    transform: translateX(-50%) translateY(-10px);
+  }
+  
