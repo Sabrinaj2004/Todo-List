@@ -25,4 +25,4 @@ A simple and intuitive To-Do List web application that helps users manage daily 
 
 Here’s a preview of the To-Do List app interface:
 
-![To-Do List Screenshot](images/todo-app-preview.png)
+![To-Do List Screenshot](TodoList.jpeg)
