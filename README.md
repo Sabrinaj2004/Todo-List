@@ -21,4 +21,8 @@ A simple and intuitive To-Do List web application that helps users manage daily 
 - HTML  
 - CSS  
 - JavaScript  
+## 📸 Screenshots
 
+Here’s a preview of the To-Do List app interface:
+
+![To-Do List Screenshot](images/todo-app-preview.png)
