@@ -29,8 +29,10 @@ Here’s a preview of the To-Do List app interface:
 
 
 Completed Task List
+
 ![To-Do List Screenshot](Screenshots/Completed_Tasks.jpeg)
 
 Pending Task List
+
 ![To-Do List Screenshot](Screenshots/Pending_tasks.jpeg)
 
